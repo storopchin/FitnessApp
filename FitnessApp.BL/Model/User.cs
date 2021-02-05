@@ -72,12 +72,12 @@ namespace FitnessApp.BL.Model
 
             if (gender == null) 
             {
-                throw new ArgumentNullException($"Заполните поле пола {nameof(name)}");
+                throw new ArgumentNullException($"Заполните поле пола {nameof(gender)}");
             }
             Gender = gender;
             if (birthDate < DateTime.Parse("01.01.1920"))
             {
-                throw new ArgumentNullException($"Дата {nameof(name)}");
+                throw new ArgumentNullException($"Дата меньше 01.01.1920 не может быть указана {nameof(birthDate)}");
             }
             BirthDate = birthDate;
         }
