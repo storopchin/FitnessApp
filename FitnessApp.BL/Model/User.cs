@@ -3,8 +3,13 @@
 
 namespace FitnessApp.BL.Model
 {
+    [Serializable]
+    /// <summary>
+    /// Пользователь
+    /// </summary>
     public class User
     {
+
         private string name;
         private Gender gender;
         private DateTime birthDate;
@@ -62,7 +67,7 @@ namespace FitnessApp.BL.Model
         /// <param name="birthDate">Дата рождения</param>
         /// <param name="weight">Вес</param>
         /// <param name="hieght">Рост</param>
-        public User(string name, Gender gender, DateTime birthDate, double weight, double hieght) 
+        public User(string name, Gender gender, DateTime birthDate, double weight, double height) 
         { 
             if (String.IsNullOrWhiteSpace(name))
             {
@@ -77,7 +82,7 @@ namespace FitnessApp.BL.Model
             Gender = gender;
             if (birthDate < DateTime.Parse("01.01.1920"))
             {
-                throw new ArgumentNullException($"Дата меньше 01.01.1920 не может быть указана {nameof(birthDate)}");
+                throw new ArgumentNullException($"Дата меньше 01.01.1920 не может быть указана {nameof(name)}");
             }
             BirthDate = birthDate;
         }

@@ -3,7 +3,7 @@
 
 namespace FitnessApp.BL.Model
 {
-
+    [Serializable]
     /// <summary>
     /// Пол
     /// </summary>
@@ -40,7 +40,5 @@ namespace FitnessApp.BL.Model
         {
             return Name;
         }
-
-
     }
 }
